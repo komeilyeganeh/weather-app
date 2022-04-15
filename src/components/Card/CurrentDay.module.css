@@ -1,5 +1,5 @@
 .current {
-    width: 12rem;
+    width: 18rem;
     height: 100%;
     padding: 15px;
     background:linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url("../../assets/bg-weather.jpg");
@@ -16,7 +16,7 @@
     font-size: 1.9rem;
 }
 .date {
-    color: #F0A500;
+    color: #fff;
 }
 .location {
     color: #F0A500;
@@ -34,6 +34,8 @@
 }
 .degree {
     font-size: 1.5rem;
+}
+.desc {
     font-weight: bold;
 }
 
