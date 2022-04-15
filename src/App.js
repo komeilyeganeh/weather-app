@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/Card/Card';
+import Form from './components/Form/Form';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{minHeight: "100vh", display: "flex",flexDirection: "column", alignItems: "center", justifyContent: "center"  }}>
+      <h1 style={{color: "#F0A500"}}>Weather App</h1>
+      <Form />
+      <Card />
+      {/* <div style={{padding: "1rem 2rem", color: "#000", backgroundColor: "#fff", borderRadius: "15px"}}>
+        <p>There is no such location</p>
+      </div> */}
     </div>
   );
 }

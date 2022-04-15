@@ -1,0 +1,46 @@
+.current {
+    width: 12rem;
+    height: 100%;
+    padding: 15px;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url("../../assets/bg-weather.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.day {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+.date {
+    color: #F0A500;
+}
+.location {
+    color: #F0A500;
+}
+.location__icon {
+    font-size: 1.5rem;
+    color: #fff;
+}
+.top__info,
+.bottom__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    color: #fff;
+}
+.degree {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .current {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+}

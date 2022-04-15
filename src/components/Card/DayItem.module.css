@@ -1,0 +1,32 @@
+.day__item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    transition: all .2s ease-in;
+}
+
+.day__item:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.cloud__icon {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .day__item {
+        row-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .day__item {
+        flex-direction: row;
+        row-gap: 0;
+    }
+}
