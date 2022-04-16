@@ -17,3 +17,9 @@
   border-radius: 15px;
   margin-top: 3rem;
 }
+
+@media screen and (max-width: 400px) {
+  .app {
+    padding: 7rem 0;
+  }
+}

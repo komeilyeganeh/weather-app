@@ -5,8 +5,8 @@ import FormContext from "./context/FormContext";
 import { apiConfig } from "./service/config";
 import { SpinnerRoundFilled } from "spinners-react";
 
-import "./App.css";
 import WeatherContext from "./context/WeatherContext";
+import "./App.css";
 
 function App() {
   const [isFoundCity, setIsFoundCity] = useState(false);
@@ -19,11 +19,12 @@ function App() {
     formCtx.cityName(ref.current.value);
     setIsLoading(true);
     fetch(
-      `${apiConfig.base}weather?q=${ref.current.value}&appid=${apiConfig.key}`
+      `${apiConfig.base}forecast?q=${ref.current.value}&cnt=5&appid=${apiConfig.key}`
     )
       .then((res) => res.json())
       .then((result) => {
-        if (result.cod === 200) {
+        console.log(result);
+        if (result.cod === "200") {
           weatherCtx.setInfo(result);
           setIsLoading(false);
           setIsFoundCity(true);
@@ -32,13 +33,14 @@ function App() {
           setIsLoading(false);
         }
       });
+      ref.current.value = "";
   };
 
   return (
     <div className="app">
       <h1 className="title__app">Weather App</h1>
       <Form onSubmit={formSubmitHandler} />
-      {isLoading && <SpinnerRoundFilled style={{marginTop: "3rem"}}/>}
+      {isLoading && <SpinnerRoundFilled style={{ marginTop: "3rem" }} />}
       {isFoundCity ? (
         <Card />
       ) : (

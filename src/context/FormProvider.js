@@ -7,10 +7,9 @@ const defaulState = {
 
 const formReducer = (state, action) => {
     if (action.type === "ADD_CITY") {
-        return {
-            city: action.payload
-        };
+        state.city = action.payload;
     }
+    state.city = "";
     return state;
 }
 
