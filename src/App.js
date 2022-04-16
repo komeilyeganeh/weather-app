@@ -45,25 +45,23 @@ function App() {
 
   return (
     <>
-        <div className={`preloader ${!preloadDom ? "hide" : ""}`}>
-          <SpinnerCircularSplit />
-        </div>
-     
-        <div className="app">
-          <h1 className="title__app">Weather App</h1>
-          <Form onSubmit={formSubmitHandler} />
-          {isLoadingCard && (
-            <SpinnerRoundFilled style={{ marginTop: "3rem" }} />
-          )}
-          {isFoundCity ? (
-            <Card />
-          ) : (
-            <div className="error__message">
-              <p>There is no such location</p>
-            </div>
-          )}
-          <Footer />
-        </div>
+      <div className={`preloader ${!preloadDom ? "hide" : ""}`}>
+        <SpinnerCircularSplit />
+      </div>
+
+      <div className="app">
+        <h1 className="title__app">Weather App</h1>
+        <Form onSubmit={formSubmitHandler} />
+        {isLoadingCard && <SpinnerRoundFilled style={{ marginTop: "3rem" }} />}
+        {isFoundCity ? (
+          <Card />
+        ) : (
+          <div className="error__message">
+            <p>There is no such location</p>
+          </div>
+        )}
+        <Footer />
+      </div>
     </>
   );
 }
