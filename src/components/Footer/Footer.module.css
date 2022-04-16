@@ -1,0 +1,18 @@
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    padding: .6rem;
+    background-color: rgba(34, 34, 34, 0.199);
+    text-align: center;
+}
+
+.detail {
+    color: #fff;
+}
+
+.designer {
+    color: #F0A500;
+    text-decoration: none;
+}

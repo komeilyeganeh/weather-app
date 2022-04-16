@@ -18,6 +18,24 @@
   margin-top: 3rem;
 }
 
+.preloader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    transition: all .3s ease-in;
+}
+.hide {
+  transform: scale(.9);
+  opacity: 0;
+  visibility: hidden;
+}
+
 @media screen and (max-width: 400px) {
   .app {
     padding: 7rem 0;
