@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { GoLocation } from "react-icons/go";
-import {WiCloudy, WiDaySunny, WiHail} from "react-icons/wi";
 import WeatherContext from "../../context/WeatherContext";
+import WeatherMain from "./WeatherMain";
 import classes from "./CurrentDay.module.css";
 
 const CurrentDay = () => {
@@ -37,19 +37,6 @@ const CurrentDay = () => {
   const dayOfMonth = date.getDate();
   const weatherTemp = dayOne.main.temp - 273.15;
   const country = infoWeather.city.country;
-  let weatherDesc;
-
-  switch (dayOne.weather[0].main) {
-    case "Clouds":
-      weatherDesc = <p className={classes.desc}>Cloudy <WiCloudy size="2.2rem"/></p>;
-      break;
-    case "Clear":
-      weatherDesc = <p className={classes.desc}>Clear <WiDaySunny size="2.2rem"/></p>;
-      break;
-      case "Rain":
-      weatherDesc = <p className={classes.desc}>Rainy <WiHail size="2.2rem"/></p>;
-      break;
-  }
 
   return (
     <div className={classes.current}>
@@ -65,7 +52,7 @@ const CurrentDay = () => {
         <span className={classes.degree}>
           {Math.round(weatherTemp)} °C
         </span>
-        {weatherDesc}
+        <WeatherMain main={dayOne.weather[0].main}/>
       </div>
     </div>
   );

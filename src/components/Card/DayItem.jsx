@@ -1,4 +1,4 @@
-import { WiCloudy, WiDaySunny,  WiHail} from "react-icons/wi";
+import { WiCloudy, WiDaySunny, WiHail, WiSnow } from "react-icons/wi";
 import classes from "./DayItem.module.css";
 
 const DayItem = ({ dayWeather }) => {
@@ -10,8 +10,11 @@ const DayItem = ({ dayWeather }) => {
     case "Clear":
       weatherIcon = <WiDaySunny size="2.2rem" className="cloud__icon" />;
       break;
-      case "Rain":
+    case "Rain":
       weatherIcon = <WiHail size="2.2rem" className="cloud__icon" />;
+      break;
+    case "Snow":
+      weatherIcon = <WiSnow size="2.2rem" className="cloud__icon" />;
       break;
   }
 
